@@ -123,4 +123,57 @@
         font-size: 2rem;
         margin: 3rem 0;
     }
+}
+
+@media (max-width: 600px) {
+    .header {
+        padding: 1.2rem 1.5%;
+    }
+    .navbar a {
+        font-size: 1.3rem;
+        margin: 2rem 0;
+        padding: 0.6rem 1rem;
+    }
+    .menu-icon {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 500px) {
+    .header {
+        padding: 0.8rem 1%;
+    }
+    .navbar a {
+        font-size: 1.1rem;
+        margin: 1.2rem 0;
+        padding: 0.5rem 0.7rem;
+    }
+    .menu-icon {
+        font-size: 1.7rem;
+    }
+}
+@media (max-width: 400px) {
+    .header {
+        padding: 0.5rem 0.5%;
+    }
+    .navbar a {
+        font-size: 0.9rem;
+        margin: 0.7rem 0;
+        padding: 0.3rem 0.5rem;
+    }
+    .menu-icon {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 375px) {
+    .header {
+        padding: 0.3rem 0.2%;
+    }
+    .navbar a {
+        font-size: 0.7rem;
+        margin: 0.4rem 0;
+        padding: 0.2rem 0.3rem;
+    }
+    .menu-icon {
+        font-size: 1rem;
+    }
 } 

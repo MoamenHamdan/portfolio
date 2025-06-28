@@ -89,24 +89,28 @@
     max-width: 29rem;
     width: 100%;
     height: auto;
-    border-radius: 50%;
+    border-radius: 90%;
     box-shadow: 0 10px 30px rgba(14, 255, 255, 0.2); /* Initial shadow */
     display: block;
-    animation: float 6s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
     transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transition */
 }
 @keyframes float {
-    0%, 100% {
-        transform: translateY(0) scale(1.1);
+    0%{
+        transform: translateY(0);
     }
-    50% {
-        transform: translateY(-15px) scale(1.02);
-    }
+         50% {
+             transform: translateY(2.4rem);
+         }
+                  100% {
+                      transform: translateY(0);
+                  }
+    
 }
 
 .home-img img:hover {
-    /* animation: none; */
-     transform: scale(1.05); 
+    /* animation: none;  */
+     transform: ease scale(1.05); 
     box-shadow: 0 15px 40px rgba(14, 255, 255, 0.4); /* Bigger, bolder shadow on hover */
     filter: brightness(1.05); /* Slight brightness increase */
 }
@@ -159,5 +163,80 @@
     
     .home-img img {
         max-width: 25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home {
+        padding: 6rem 1.5% 0;
+    }
+    .home-content h2 {
+        font-size: 3.2rem;
+    }
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+    .home-content h4 {
+        font-size: 1.8rem;
+    }
+    .home-content p {
+        font-size: 1.3rem;
+    }
+    .home-img img {
+        max-width: 18rem;
+    }
+    .btn-group {
+        gap: 1rem;
+    }
+}
+@media (max-width: 500px) {
+    .home {
+        padding: 4rem 1% 0;
+    }
+    .home-content h2 {
+        font-size: 2.4rem;
+    }
+    .home-content h3 {
+        font-size: 1.7rem;
+    }
+    .home-content h4 {
+        font-size: 1.3rem;
+    }
+    .home-img img {
+        max-width: 14rem;
+    }
+}
+@media (max-width: 400px) {
+    .home {
+        padding: 2.5rem 0.5% 0;
+    }
+    .home-content h2 {
+        font-size: 1.7rem;
+    }
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+    .home-content h4 {
+        font-size: 1rem;
+    }
+    .home-img img {
+        max-width: 10rem;
+    }
+}
+@media (max-width: 375px) {
+    .home {
+        padding: 1.5rem 0.2% 0;
+    }
+    .home-content h2 {
+        font-size: 1.3rem;
+    }
+    .home-content h3 {
+        font-size: 1rem;
+    }
+    .home-content h4 {
+        font-size: 0.8rem;
+    }
+    .home-img img {
+        max-width: 8rem;
     }
 } 

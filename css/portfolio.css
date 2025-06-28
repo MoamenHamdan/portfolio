@@ -200,4 +200,102 @@
     .portfolio-box img {
         height: 16rem;
     }
+}
+
+@media (max-width: 600px) {
+    .portfolio-filters {
+        gap: 0.5rem;
+    }
+    .filter-btn {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+    }
+    .porfolio-container {
+        gap: 1.5rem;
+    }
+    .portfolio-box {
+        height: 18rem;
+        max-width: 100%;
+    }
+    .portfolio-box img {
+        height: 10rem;
+    }
+    .potfolio-layer h4 {
+        font-size: 1.2rem;
+    }
+    .potfolio-layer p {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 500px) {
+    .portfolio-filters {
+        gap: 0.2rem;
+    }
+    .filter-btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.8rem;
+    }
+    .porfolio-container {
+        gap: 0.7rem;
+    }
+    .portfolio-box {
+        height: 12rem;
+    }
+    .portfolio-box img {
+        height: 6rem;
+    }
+    .potfolio-layer h4 {
+        font-size: 0.8rem;
+    }
+    .potfolio-layer p {
+        font-size: 0.6rem;
+    }
+}
+@media (max-width: 400px) {
+    .portfolio-filters {
+        gap: 0.1rem;
+    }
+    .filter-btn {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.6rem;
+    }
+    .porfolio-container {
+        gap: 0.3rem;
+    }
+    .portfolio-box {
+        height: 8rem;
+    }
+    .portfolio-box img {
+        height: 4rem;
+    }
+    .potfolio-layer h4 {
+        font-size: 0.5rem;
+    }
+    .potfolio-layer p {
+        font-size: 0.4rem;
+    }
+}
+@media (max-width: 375px) {
+    .portfolio-filters {
+        gap: 0.05rem;
+    }
+    .filter-btn {
+        padding: 0.1rem 0.2rem;
+        font-size: 0.4rem;
+    }
+    .porfolio-container {
+        gap: 0.1rem;
+    }
+    .portfolio-box {
+        height: 5rem;
+    }
+    .portfolio-box img {
+        height: 2rem;
+    }
+    .potfolio-layer h4 {
+        font-size: 0.3rem;
+    }
+    .potfolio-layer p {
+        font-size: 0.2rem;
+    }
 } 
