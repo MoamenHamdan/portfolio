@@ -4,7 +4,20 @@
     position: relative;
 }
 
+/* Contact Particles Background */
+#particles-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
 .contact form {
+    position: relative;
+    z-index: 2;
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
@@ -13,6 +26,7 @@
     border-radius: var(--border-radius);
     border: 1px solid rgba(14, 255, 255, 0.1);
     box-shadow: var(--shadow-medium);
+    backdrop-filter: blur(10px);
 }
 
 .contact form .input-box {
