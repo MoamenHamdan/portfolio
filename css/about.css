@@ -1,0 +1,135 @@
+/* About Section Styles */
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    background: var(--darker-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 30% 70%, rgba(14, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(14, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: -1;
+}
+
+.about-img {
+    flex-shrink: 0;
+    max-width: 35rem;
+    width: 100%;
+}
+
+.about-img img {
+    width: 100%;
+    height: auto;
+    max-width: 35rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow-heavy);
+    transition: var(--transition);
+    display: block;
+    border: 3px solid var(--primary-color);
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(14, 255, 255, 0.5);
+}
+
+.about-content {
+    max-width: 50rem;
+}
+
+.about-content h5 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.about-content p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+/* Skills Section */
+.skills {
+    margin: 3rem 0;
+}
+
+.skill-item {
+    margin-bottom: 2rem;
+}
+
+.skill-name {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 4px;
+    transition: width 1.5s ease-in-out;
+    position: relative;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+/* Responsive About */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    
+    .about-img {
+        max-width: 28rem;
+        margin: 0 auto;
+    }
+    
+    .about-img img {
+        max-width: 28rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .about-img {
+        max-width: 25rem;
+    }
+    
+    .about-img img {
+        max-width: 25rem;
+    }
+} 

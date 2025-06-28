@@ -1,0 +1,70 @@
+/* Contact Section Styles */
+.contact {
+    background: var(--dark-bg);
+    position: relative;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+    background: var(--darker-bg);
+    padding: 4rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(14, 255, 255, 0.1);
+    box-shadow: var(--shadow-medium);
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-primary);
+    background: var(--dark-bg);
+    border: 1px solid rgba(14, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(14, 255, 255, 0.2);
+}
+
+.contact form .input-box input {
+    width: 48%;
+}
+
+.contact form textarea {
+    resize: none;
+    margin-bottom: 2rem;
+}
+
+.contact form .btn {
+    cursor: pointer;
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+/* Responsive Contact */
+@media (max-width: 768px) {
+    .contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .contact form .input-box input {
+        width: 100%;
+    }
+} 

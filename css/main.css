@@ -1,0 +1,28 @@
+/* Main CSS File - Imports all section styles */
+
+/* 1. Variables and Global Styles */
+@import url('variables.css');
+
+/* 2. Header and Navigation */
+@import url('header.css');
+
+/* 3. Home Section */
+@import url('home.css');
+
+/* 4. About Section */
+@import url('about.css');
+
+/* 5. Services Section */
+@import url('services.css');
+
+/* 6. Portfolio Section */
+@import url('portfolio.css');
+
+/* 7. Contact Section */
+@import url('contact.css');
+
+/* 8. Footer */
+@import url('footer.css');
+
+/* 9. Responsive Design */
+@import url('responsive.css'); 
