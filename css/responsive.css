@@ -84,9 +84,12 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+    .about .heading {
+        font-size: 3.5rem !important;
+        margin-bottom: 2rem !important;
+    }
 }
 
-/* Large phones and small tablets */
 @media (max-width: 600px) {
     html {
         font-size: 52%;
@@ -201,12 +204,18 @@
         max-width: 100vw !important;
         overflow-x: hidden !important;
     }
+    .about .heading {
+        font-size: 2.8rem !important;
+        margin-bottom: 1.5rem !important;
+    }
 }
 
 @media (max-width: 500px) {
     .home-img img,
     .about-img img {
-        max-width: 8rem !important;
+        max-width: 12rem !important;
+        align-items: center;
+        justify-content: center;
     }
     .services-box {
         padding: 1rem 0.5rem;
@@ -247,6 +256,10 @@
     .contact form p {
         font-size: 1rem;
     }
+    .about .heading {
+        font-size: 2.2rem !important;
+        margin-bottom: 1rem !important;
+    }
 }
 
 /* Small phones */
@@ -283,6 +296,10 @@
     .contact form p {
         font-size: 0.9rem;
     }
+    .about .heading {
+        font-size: 1.8rem !important;
+        margin-bottom: 0.8rem !important;
+    }
 }
 
 /* Ultra-small phones */
@@ -318,6 +335,10 @@
     .footer-text p,
     .contact form p {
         font-size: 0.8rem;
+    }
+    .about .heading {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
     }
 }
 
