@@ -4,11 +4,60 @@
     position: relative;
 }
 
+/* Filter Buttons */
+.portfolio-filters {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 1rem 2rem;
+    background: var(--darker-bg);
+    border: 2px solid var(--primary-color);
+    border-radius: 2.5rem;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(14, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.filter-btn:hover::before {
+    left: 100%;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-medium);
+}
+
 .porfolio-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     gap: 3rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    /* Ensure grid maintains consistent layout */
+    grid-auto-flow: dense;
+    justify-items: center;
 }
 
 .portfolio-box {
@@ -18,6 +67,11 @@
     box-shadow: var(--shadow-medium);
     transition: var(--transition);
     background: var(--dark-bg);
+    height: 25rem; /* Fixed height for all portfolio boxes */
+    width: 100%;
+    max-width: 35rem; /* Prevent boxes from getting too wide */
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio-box:hover {
@@ -27,8 +81,8 @@
 
 .portfolio-box img {
     width: 100%;
-    height: auto;
-    min-height: 25rem;
+    height: 25rem; /* Fixed height for images */
+    object-fit: cover; /* Maintains aspect ratio while filling the container */
     display: block;
     transition: var(--transition);
 }
@@ -93,15 +147,54 @@
     color: var(--primary-color);
 }
 
+/* Portfolio item states */
+.portfolio-box.hidden {
+    display: none;
+}
+
+.portfolio-box.visible {
+    display: flex;
+    animation: fadeInUp 0.6s ease-out;
+}
+
 /* Responsive Portfolio */
 @media (max-width: 768px) {
+    .portfolio-filters {
+        gap: 1rem;
+    }
+    
+    .filter-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.2rem;
+    }
+    
     .porfolio-container {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .portfolio-box {
+        height: 28rem;
+        max-width: 100%;
+    }
+    
+    .portfolio-box img {
+        height: 18rem;
     }
 }
 
 @media (max-width: 617px) {
     .porfolio-container {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    
+    .portfolio-box {
+        height: 26rem;
+        max-width: 100%;
+    }
+    
+    .portfolio-box img {
+        height: 16rem;
     }
 } 

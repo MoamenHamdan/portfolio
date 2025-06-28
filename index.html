@@ -174,8 +174,17 @@
     <section class="portfolio" id="portfolio">
         <h2 class="heading">Latest <span>Projects</span></h2>
 
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="dotnet">.NET</button>
+            <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+            <button class="filter-btn" data-filter="database">Database</button>
+            <button class="filter-btn" data-filter="web">Web Development</button>
+        </div>
+
         <div class="porfolio-container">
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-category="dotnet">
                 <img src="images/Digital Wallet.jpeg" class="project-img" alt="Digital Personal Wallet Project" loading="lazy">
                 <div class="potfolio-layer">
                     <h4>Digital Personal Wallet</h4>
@@ -186,7 +195,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-category="dotnet">
                 <img src="images/Senior.jpeg" class="project-img" alt="Senior Project" loading="lazy">
                 <div class="potfolio-layer">
                     <h4>Senior Project</h4>
@@ -197,7 +206,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-category="cybersecurity">
                 <img src="images/Phishing Email Detection.jpeg" class="project-img" alt="Phishing Email Detection Project" loading="lazy">
                 <div class="potfolio-layer">
                     <h4>Phishing Email Detection</h4>
@@ -208,7 +217,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-category="database">
                 <img src="images/Database.jpeg" class="project-img" alt="Airport Management System Project" loading="lazy">
                 <div class="potfolio-layer">
                     <h4>Airport Management System</h4>
@@ -219,7 +228,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-category="web">
                 <img src="images/web.jpeg" class="project-img" alt="E-Commerce Website Project" loading="lazy">
                 <div class="potfolio-layer">
                     <h4>E-Commerce Website</h4>
@@ -230,7 +239,7 @@
                 </div>
             </div>
 
-            <div class="portfolio-box">
+            <div class="portfolio-box" data-category="database">
                 <img src="images/data.jpeg" class="project-img" alt="Data Structure Project" loading="lazy">
                 <div class="potfolio-layer">
                     <h4>Data Structure Project</h4>
