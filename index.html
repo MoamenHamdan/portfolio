@@ -256,18 +256,18 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
         
-        <form action="mailto:moumenhamdan5@example.com" method="GET" enctype="text/plain">
+        <form id="contactForm">
             <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
             </div>
     
             <div class="input-box">
-                <input type="tel" name="phone" placeholder="Mobile Number">
-                <input type="text" name="subject" placeholder="Email Subject" required>
+                <input type="tel" id="phone" name="phone" placeholder="Mobile Number">
+                <input type="text" id="subject" name="subject" placeholder="Email Subject" required>
             </div>
     
-            <textarea name="body" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
             <button type="submit" class="btn">
                 <i class='bx bx-send'></i>
                 Send Message

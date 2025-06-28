@@ -328,28 +328,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Form validation and enhancement
+    // Form validation and submission
     function initFormValidation() {
-        const form = document.querySelector('.contact form');
+        const form = document.getElementById('contactForm');
         if (!form) return;
         
         const inputs = form.querySelectorAll('input, textarea');
         
+        // Real-time validation
         inputs.forEach(input => {
-            // Add floating label effect
-            input.addEventListener('focus', function() {
-                this.parentElement.classList.add('focused');
-            });
-            
-            input.addEventListener('blur', function() {
-                if (!this.value) {
-                    this.parentElement.classList.remove('focused');
+            input.addEventListener('blur', () => validateField(input));
+            input.addEventListener('input', () => {
+                if (input.classList.contains('error')) {
+                    validateField(input);
                 }
             });
-            
-            // Real-time validation
-            input.addEventListener('input', function() {
-                validateField(this);
+            input.addEventListener('focus', () => {
+                input.classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                input.classList.remove('focused');
             });
         });
         
@@ -364,9 +362,34 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             if (isValid) {
+                // Create mailto link with form data
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const subject = document.getElementById('subject').value.trim();
+                const message = document.getElementById('message').value.trim();
+                
+                // Build email body
+                let emailBody = `Name: ${name}\n`;
+                emailBody += `Email: ${email}\n`;
+                if (phone) {
+                    emailBody += `Phone: ${phone}\n`;
+                }
+                emailBody += `\nMessage:\n${message}`;
+                
+                // Create mailto URL
+                const mailtoUrl = `mailto:moumenhamdan5@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                
+                // Open email client
+                window.location.href = mailtoUrl;
+                
                 // Show success message
-                showNotification('Message sent successfully!', 'success');
-                form.reset();
+                showNotification('Email client opened successfully!', 'success');
+                
+                // Reset form after a short delay
+                setTimeout(() => {
+                    form.reset();
+                }, 1000);
             } else {
                 showNotification('Please fill all required fields correctly.', 'error');
             }
