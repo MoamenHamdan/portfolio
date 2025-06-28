@@ -73,10 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('.home-img, .about-img');
             
-            parallaxElements.forEach(element => {
-                const speed = 0.5;
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
+            // parallaxElements.forEach(element => {
+            //     const speed = 0.5;
+            //     element.style.transform = `translateY(${scrolled * speed}px)`;
+            // });
         });
         
         // Smooth reveal animations
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear any existing content
         typedElement.textContent = '';
         
-        const strings = ['Bug Hunter', 'Back-End Developer', 'SemiColon Ambassador', 'Cybersecurity Enthusiast'];
+        const strings = ['Bug Hunter', 'Back-End Developer', 'Semicolon Ambassador', 'Cybersecurity Enthusiast'];
         
         let stringIndex = 0;
         let charIndex = 0;

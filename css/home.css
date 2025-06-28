@@ -90,14 +90,25 @@
     width: 100%;
     height: auto;
     border-radius: 50%;
-    box-shadow: var(--shadow-heavy);
-    animation: floatImage 6s ease-in-out infinite;
-    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(14, 255, 255, 0.2); /* Initial shadow */
     display: block;
+    animation: float 6s ease-in-out infinite;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother transition */
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) scale(1.1);
+    }
+    50% {
+        transform: translateY(-15px) scale(1.02);
+    }
 }
 
 .home-img img:hover {
-    transform: scale(1.05);
+    /* animation: none; */
+     transform: scale(1.05); 
+    box-shadow: 0 15px 40px rgba(14, 255, 255, 0.4); /* Bigger, bolder shadow on hover */
+    filter: brightness(1.05); /* Slight brightness increase */
 }
 
 /* Multiple text typing animation */
