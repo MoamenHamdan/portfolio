@@ -32,7 +32,7 @@
 .about-img img {
     width: 100%;
     height: auto;
-    max-width: 35rem;
+    max-width: 30rem;
     border-radius: 50%;
     box-shadow: var(--shadow-heavy);
    
@@ -57,35 +57,38 @@
 }
 
 .about-content {
-    max-width: 70rem;
+    max-width: 60rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.3rem;
+    
 }
 
 .about-content h5 {
-    font-size: 2.4rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
     color: var(--primary-color);
 }
 
 .about-content p {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 
 /* Skills Section */
 .skills {
-    margin: 3rem 0;
+    margin: 2rem 0;
 }
 
 .skill-item {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .skill-name {
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-primary);
     margin-bottom: 1rem;

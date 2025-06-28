@@ -52,12 +52,14 @@
 
 .porfolio-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 3rem;
     margin-top: 2rem;
+    margin-bottom: 7rem;
     /* Ensure grid maintains consistent layout */
     grid-auto-flow: dense;
     justify-items: center;
+
 }
 
 .portfolio-box {
@@ -69,9 +71,10 @@
     background: var(--dark-bg);
     height: 25rem; /* Fixed height for all portfolio boxes */
     width: 100%;
-    max-width: 35rem; /* Prevent boxes from getting too wide */
+    max-width: 40rem; /* Prevent boxes from getting too wide */
     display: flex;
     flex-direction: column;
+    
 }
 
 .portfolio-box:hover {
